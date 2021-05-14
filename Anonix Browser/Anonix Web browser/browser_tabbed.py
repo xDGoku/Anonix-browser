@@ -3,9 +3,12 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtWebEngineWidgets import *
 from PyQt5.QtPrintSupport import *
-
+import win32gui, win32con
 import os
 import sys
+
+hide = win32gui.GetForegroundWindow()
+win32gui.ShowWindow(hide , win32con.SW_HIDE)
 
 
 class AboutDialog(QDialog):
